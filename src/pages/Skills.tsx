@@ -39,6 +39,47 @@ const Skills = () => {
     "https://skillicons.dev/icons?i=wordpress",
    
   ];
+  const names1 = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Node.js",
+    "TypeScript",
+    "Sass",
+    "C++",
+    "C",
+    "Python",
+    "Tailwind CSS",
+    "Bootstrap",
+    "React",
+  ];
+
+  const names2 = [
+    "Three.js",
+    "Redux",
+    "Express",
+    "Next.js",
+    "FastAPI",
+    "MongoDB",
+    "MySQL",
+    "PostgreSQL",
+    "Prisma",
+    "AWS",
+    "Cloudflare",
+    "Firebase"
+    ]
+
+  const names3 = ["GCP",
+    "Netlify",
+    "Vercel",
+    "Docker",
+    "Git",
+    "GitHub",
+    "Markdown",
+    "npm",
+    "Vite",
+    "WordPress"]
+  
 
 
   return (
@@ -47,7 +88,7 @@ const Skills = () => {
         </div> */}
     <div className="text-3xl  sm:text-2xl z-[10] absolute top-[-5px] md:-top-[30px] left-1/2 translate-x-[-50%] md:text-6xl font-bold  bg-clip-text text-transparent bg-gradient-to-b mt-12 mb-[-100px]  from-neutral-200 to-neutral-500 py-4 sm:py-8 text-center sm:text-left"
       >Skills</div>
-       <ParallaxScrollSecond images={images} />
+       <ParallaxScrollSecond names1={names1} names2={names2} names3={names3} images={images} />
     </div>
   )
 }

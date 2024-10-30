@@ -4,7 +4,7 @@ import { useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
 import { cn } from "../../../lib/utils";
 
-export const StickyScroll = ({
+export const StickyScrollMobile = ({
   content,
   contentClassName,
 }: {
@@ -12,6 +12,7 @@ export const StickyScroll = ({
     title: string;
     description: string;
     content?: React.ReactNode | any;
+    modal?: React.ReactNode | any;
   }[];
   contentClassName?: string;
 }) => {
@@ -50,7 +51,7 @@ export const StickyScroll = ({
   return (
     <motion.div
     
-      className="md:h-[350px] hidden h-[250px] overflow-y-auto no-scrollbar md:flex  justify-center relative space-x-10 rounded-md "
+      className="md:h-[350px] flex h-[250px] overflow-y-auto no-scrollbar md:flex  justify-center relative space-x-10 rounded-md "
       ref={ref}
     >
       <div className="div relative flex items-start md:px-4">
@@ -75,9 +76,11 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-kg text-slate-300 max-w-sm mt-10"
+                className="text-kg text-slate-300 max-w-sm "
               >
-                {item.description}
+                {
+                  item.modal
+                }
               </motion.p>
             </div>
           ))}
