@@ -106,7 +106,7 @@ const contentMobile = [
     modal : <AnimatedModalDemo content={{text:"An application to find ratings and reviews for the latest movies and TV shows. Users can also watch trailers and get recommendations based on their preferences.",
       link : "https://movix-henna-five.vercel.app/",
       images : ["/movix1.png","/movix2.png","/movix3.png","/movix4.png","/movix5.png"],
-      title : "Seven Burgers" ,
+      title : "Movix" ,
       linkText : "/movix"
     }}/>
   },
