@@ -118,7 +118,7 @@ export function ExpandableCardDemo() {
         ) : null}
       </AnimatePresence>
       <ul className=" mx-auto h-[600px] md:h-full w-full overflow-auto md:block grid grid-cols-2 md:w-[50%] gap-4">
-        {cards.map((card, index) => (
+        {cards.map((card) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
             key={`card-${card.title}-${id}`}
