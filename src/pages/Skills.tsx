@@ -1,7 +1,7 @@
+import { motion } from "framer-motion"; // Import motion from framer-motion
 import { ParallaxScrollSecond } from "../components/ui/parallax-scroll";
 
 const Skills = () => {
-  
   const images = [
     "https://skillicons.dev/icons?i=html",
     "https://skillicons.dev/icons?i=css",
@@ -37,8 +37,8 @@ const Skills = () => {
     "https://skillicons.dev/icons?i=npm",
     "https://skillicons.dev/icons?i=vite",
     "https://skillicons.dev/icons?i=wordpress",
-   
   ];
+
   const names1 = [
     "HTML",
     "CSS",
@@ -66,10 +66,11 @@ const Skills = () => {
     "Prisma",
     "AWS",
     "Cloudflare",
-    "Firebase"
-    ]
+    "Firebase",
+  ];
 
-  const names3 = ["GCP",
+  const names3 = [
+    "GCP",
     "Netlify",
     "Vercel",
     "Docker",
@@ -78,19 +79,28 @@ const Skills = () => {
     "Markdown",
     "npm",
     "Vite",
-    "WordPress"]
-  
-
+    "WordPress",
+  ];
 
   return (
     <div className="relative">
-      {/* <div className="bg-black h-[60px] absolute top-[0] md:-top-[12px] rounded-lg left-1/2 translate-x-[-50%]   py-4 sm:py-8 text-center mt-12 mb-[-100px] z-50 w-[150px]">
-        </div> */}
-    <div className="text-3xl  sm:text-2xl z-[10] absolute top-[-5px] md:-top-[30px] left-1/2 translate-x-[-50%] md:text-6xl font-bold  bg-clip-text text-transparent bg-gradient-to-b mt-12 mb-[-100px]  from-neutral-200 to-neutral-500 py-4 sm:py-8 text-center sm:text-left"
-      >Skills</div>
-       <ParallaxScrollSecond names1={names1} names2={names2} names3={names3} images={images} />
+      <motion.div
+        className="text-3xl  sm:text-2xl z-[10] absolute top-[-5px] md:-top-[30px] left-1/2 translate-x-[-50%] md:text-6xl font-bold  bg-clip-text text-transparent bg-gradient-to-b mt-12 mb-[-100px]  from-neutral-200 to-neutral-500 py-4 sm:py-8 text-center sm:text-left"
+        initial={{ opacity: 0, y: -20, x: "-50%" }} // Initial state
+        animate={{ opacity: 1, y: 0, x: "-50%" }} // Animate to
+        transition={{ duration: 0.5 }} // Transition properties
+      >
+        Skills
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }} // Initial state for the ParallaxScrollSecond
+        animate={{ opacity: 1 }} // Animate to
+        transition={{ delay: 0.2, duration: 0.5 }} // Delay and duration for the transition
+      >
+        <ParallaxScrollSecond names1={names1} names2={names2} names3={names3} images={images} />
+      </motion.div>
     </div>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;

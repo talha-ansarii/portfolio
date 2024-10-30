@@ -19,7 +19,7 @@ export function AnimatedModalDemo() {
   return (
     <div className="pt-2 flex items-center justify-start">
       <Modal>
-        <ModalTrigger className=" text-sm font-semibold text-[#EFF1C5] dark:bg-white dark:text-black  flex justify-center group/modal-btn">
+        <ModalTrigger className="  m-auto text-sm font-semibold text-[#EFF1C5] dark:bg-white dark:text-black  flex justify-center group/modal-btn">
           <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
             View Details
           </span>
