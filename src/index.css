@@ -35,7 +35,7 @@
 
 body{
   background-color: #1a1a1a;
-  overflow: hidden; /* Hide scrollbars */
+  /* overflow: hidden; Hide scrollbars */
   @apply font-orbitron; /* Or replace 'font-inter' with your desired font family */
   
 }

@@ -39,14 +39,14 @@ export const ParallaxScrollSecond = ({
 
   return (
     <div
-      className={cn("h-[calc(100vh-100px)] relative z-[20] no-scrollbar items-start overflow-y-auto w-[calc(100vw-100px)]", className)}
+      className={cn("h-[calc(100vh-100px)]  relative z-[20] no-scrollbar items-start overflow-y-auto w-[calc(100vw-100px)]", className)}
       ref={gridRef}
     >
     
 
         
       <div
-        className=" grid-cols-3 hidden md:grid md:grid-cols-2 lg:grid-cols-3 items-start max-w-5xl mx-auto gap-10 py-40 px-10"
+        className=" grid-cols-3  hidden md:grid md:grid-cols-2 lg:grid-cols-3 items-start max-w-5xl mx-auto gap-10 py-40 px-10"
         ref={gridRef}
       >
         
@@ -112,11 +112,11 @@ export const ParallaxScrollSecond = ({
         </div>
       </div>
       <div
-        className=" grid-cols-3 grid md:hidden md:grid-cols-2 lg:grid-cols-3 items-start max-w-5xl mx-auto gap-10 py-40 px-10"
+        className=" grid-cols-3 grid md:hidden  md:grid-cols-2 lg:grid-cols-3 items-start justify-center max-w-5xl mx-auto gap-x-16 py-40 px-10"
         ref={gridRef}
       >
         
-        <div className="grid gap-10">
+        <div className="grid justify-center  gap-10">
           {firstPart.map((el, idx) => (
             <motion.div
               style={{
@@ -128,7 +128,7 @@ export const ParallaxScrollSecond = ({
             >
               <img
                 src={el}
-                className="object-cover object-left-top peer rounded-lg gap-10 !m-0 !p-0"
+                className="object-cover w-24 h-24 object-left-top peer rounded-lg gap-10 !m-0 !p-0"
                 height="400"
                 width="400"
                 alt="thumbnail"
@@ -138,12 +138,12 @@ export const ParallaxScrollSecond = ({
             </motion.div>
           ))}
         </div>
-        <div className="grid gap-10">
+        <div className="grid gap-2 pl-3 justify-center ">
           {secondPart.map((el, idx) => (
             <motion.div key={"grid-2 " + idx}>
               <img
                 src={el}
-                className=" object-cover peer object-left-top rounded-lg gap-10 !m-0 !p-0"
+                className="object-cover w-24 h-24 object-left-top peer rounded-lg gap-10 !m-0 !p-0"
                 height="400"
                 width="400"
                 alt="thumbnail"
@@ -153,7 +153,7 @@ export const ParallaxScrollSecond = ({
             </motion.div>
           ))}
         </div>
-        <div className="grid gap-10">
+        <div className="grid gap-10 justify-center ">
           {thirdPart.map((el, idx) => (
             <motion.div
               style={{
@@ -165,7 +165,7 @@ export const ParallaxScrollSecond = ({
             >
               <img
                 src={el}
-                className=" object-cover peer object-left-top rounded-lg gap-10 !m-0 !p-0"
+                className="w-24 h-24 object-cover peer object-left-top rounded-lg gap-10 !m-0 !p-0"
                 height="400"
                 width="400"
                 alt="thumbnail"

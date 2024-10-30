@@ -11,7 +11,7 @@ import BlueBackgroundWrapper from "./components/BlueBackgroundWrapper"
 function App() {
 
   return (
-<>
+<div className="">
 
 <BrowserRouter>
   <BlueBackgroundWrapper>
@@ -26,7 +26,7 @@ function App() {
 </Routes>
 </BlueBackgroundWrapper>
 </BrowserRouter>
-</>
+</div>
   )
 }
 

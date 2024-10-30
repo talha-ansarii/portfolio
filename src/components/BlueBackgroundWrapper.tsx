@@ -48,7 +48,7 @@ export default function BlueBackgroundWrapper({ children }: BlueBackgroundWrappe
       <span>{convertToTwoDigit(time.seconds)}</span>
       
     </div>
-    <div className='absolute left-1/2 translate-x-[-50%]   h-[30px] z-[50] bottom-10 md:top-10 md:right-6 flex gap-2'>
+    <div className='absolute left-1/2 translate-x-[-50%]   h-[30px] z-[50] bottom-14 md:top-10 md:right-6 flex gap-2'>
         <Link to={"/"}>
     <IconBrandLinkedin className=" text-white hover:scale-110 transition-all duration-100   "  stroke={1.3} size={28} />
         </Link>
