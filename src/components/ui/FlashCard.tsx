@@ -43,7 +43,7 @@ export function ExpandableCardDemo() {
       </AnimatePresence>
       <AnimatePresence>
         {active && typeof active === "object" ? (
-          <div className="fixed inset-0  grid place-items-center z-[100]">
+          <div className="fixed inset-0   grid place-items-center z-[100]">
             <motion.button
               key={`button-${active.title}-${id}`}
               layout
@@ -67,7 +67,7 @@ export function ExpandableCardDemo() {
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
+              className="w-full  overflow-hidden  max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col  bg-neutral-900 sm:rounded-3xl "
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
                 <img
@@ -76,22 +76,22 @@ export function ExpandableCardDemo() {
                   height={200}
                   src={active.src}
                   alt={active.title}
-                  className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
+                  className="w-full h-60 lg:h-60 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-center"
                 />
               </motion.div>
 
               <div>
-                <div className="flex justify-between items-start p-4">
+                <div className="flex justify-between items-start mb-[-10px] px-4">
                   <div className="">
                     <motion.h3
                       layoutId={`title-${active.title}-${id}`}
-                      className="font-bold text-neutral-700 dark:text-neutral-200"
+                      className="font-bold text-neutral-200"
                     >
                       {active.title}
                     </motion.h3>
                     <motion.p
                       layoutId={`description-${active.description}-${id}`}
-                      className="text-neutral-600 dark:text-neutral-400"
+                      className="text-neutral-400"
                     >
                       {active.description}
                     </motion.p>
@@ -105,7 +105,7 @@ export function ExpandableCardDemo() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                    className="  text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
                   >
                     {typeof active.content === "function"
                       ? active.content()
@@ -117,13 +117,13 @@ export function ExpandableCardDemo() {
           </div>
         ) : null}
       </AnimatePresence>
-      <ul className=" mx-auto h-[600px] md:h-full w-full overflow-auto md:block grid grid-cols-2 md:w-[50%] gap-4">
+      <ul className=" mx-auto  overflow-hidden  h-[600px] md:h-full w-full  md:block grid grid-cols-2 md:w-[50%] gap-4">
         {cards.map((card) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
             key={`card-${card.title}-${id}`}
             onClick={() => setActive(card)}
-            className="p-4 flex flex-col md:flex-row group justify-between items-center hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
+            className="p-4  flex flex-col mt-2 bg-gray-500 transition-all duration-300 md:flex-row group justify-between items-center hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
           >
             <div className="flex gap-4 flex-col md:flex-row ">
               <motion.div layoutId={`image-${card.title}-${id}`}>
@@ -132,19 +132,19 @@ export function ExpandableCardDemo() {
                   height={100}
                   src={card.src}
                   alt={card.title}
-                  className="h-40 w-40 md:h-14 md:w-14 rounded-lg object-cover object-top"
+                  className="h-40 w-40 md:h-14 md:w-14 rounded-lg object-cover object-center"
                 />
               </motion.div>
               <div className="">
                 <motion.h3
                   layoutId={`title-${card.title}-${id}`}
-                  className="font-medium group-hover:text-neutral-800 text-neutral-200 text-center md:text-left"
+                  className="font-medium group-hover:text-neutral-800 text-neutral-100 text-center md:text-left"
                 >
                   {card.title}
                 </motion.h3>
                 <motion.p
                   layoutId={`description-${card.description}-${id}`}
-                  className="text-neutral-500 dark:text-neutral-400 text-center md:text-left"
+                  className="text-neutral-700 dark:text-neutral-400 text-center md:text-left"
                 >
                   {card.description}
                 </motion.p>
@@ -193,92 +193,192 @@ export const CloseIcon = () => {
 
 const cards = [
   {
-    description: "Lana Del Rey",
-    title: "Summertime Sadness",
-    src: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
+    description: "Oct 2024 - Present",
+    title: "Distance Connect",
+    src: "/distance.png",
     ctaText: "Play",
     ctaLink: "https://ui.aceternity.com/templates",
-    content: () => {
-      return (
-        <p>
-          Lana Del Rey, an iconic American singer-songwriter, is celebrated for
-          her melancholic and cinematic music style. Born Elizabeth Woolridge
-          Grant in New York City, she has captivated audiences worldwide with
-          her haunting voice and introspective lyrics. <br /> <br /> Her songs
-          often explore themes of tragic romance, glamour, and melancholia,
-          drawing inspiration from both contemporary and vintage pop culture.
-          With a career that has seen numerous critically acclaimed albums, Lana
-          Del Rey has established herself as a unique and influential figure in
-          the music industry, earning a dedicated fan base and numerous
-          accolades.
-        </p>
+    content: () => {return (
+       <div className="text-sm font-bold titillium-web">
+        Big things coming up!!
+</div>
       );
     },
   },
-  {
-    description: "Babbu Maan",
-    title: "Mitran Di Chhatri",
-    src: "https://assets.aceternity.com/demos/babbu-maan.jpeg",
-    ctaText: "Play",
-    ctaLink: "https://ui.aceternity.com/templates",
-    content: () => {
-      return (
-        <p>
-          Babu Maan, a legendary Punjabi singer, is renowned for his soulful
-          voice and profound lyrics that resonate deeply with his audience. Born
-          in the village of Khant Maanpur in Punjab, India, he has become a
-          cultural icon in the Punjabi music industry. <br /> <br /> His songs
-          often reflect the struggles and triumphs of everyday life, capturing
-          the essence of Punjabi culture and traditions. With a career spanning
-          over two decades, Babu Maan has released numerous hit albums and
-          singles that have garnered him a massive fan following both in India
-          and abroad.
-        </p>
-      );
-    },
-  },
-
   
   {
-    description: "Led Zeppelin",
-    title: "Stairway To Heaven",
-    src: "https://assets.aceternity.com/demos/led-zeppelin.jpeg",
+    description: "Feb 2024 - Present",
+    title: "DTU Times",
+    src: "/dtu.png",
     ctaText: "Play",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
       return (
-        <p>
-          Led Zeppelin, a legendary British rock band, is renowned for their
-          innovative sound and profound impact on the music industry. Formed in
-          London in 1968, they have become a cultural icon in the rock music
-          world. <br /> <br /> Their songs often reflect a blend of blues, hard
-          rock, and folk music, capturing the essence of the 1970s rock era.
-          With a career spanning over a decade, Led Zeppelin has released
-          numerous hit albums and singles that have garnered them a massive fan
-          following both in the United Kingdom and abroad.
-        </p>
+        <div className="text-sm titillium-web">
+          <div>
+            A <b>Front-End Developer</b> who is responsible for:
+          </div>
+          <ul className="flex flex-col gap-2">
+            <div className="flex gap-2">
+              <div>
+          ●
+
+              </div>
+            <li>Crafting responsive and engaging user interfaces using <strong>HTML5</strong>, <strong>CSS3</strong>, and <strong>JavaScript</strong></li>
+            </div>
+            <div className="flex gap-2">
+              <div>
+          ●
+
+              </div>
+              <li>Utilizing CSS frameworks like <strong>Bootstrap</strong> and <strong>TailwindCSS</strong> for efficient, consistent styling</li>
+            </div>
+            <div className="flex gap-2">
+              <div>
+          ●
+
+              </div>
+              <li>Developing web pages with <strong>React</strong> and <strong>Next.js</strong> for optimal performance and functionality</li>
+            </div>
+            <div className="flex gap-2">
+              <div>
+          ●
+
+              </div>
+              <li>Ensuring designs are mobile-optimized to provide seamless user experiences across devices</li>
+
+            </div>
+
+
+
+          
+
+           
+
+          </ul>
+        </div>
+      );
+    },
+    
+  },
+  {
+    description: "Feb 2024 - July 2024",
+    title: "Mathsloyal",
+    src: "/mathsloyal.webp",
+    ctaText: "Play",
+    ctaLink: "https://ui.aceternity.com/templates",
+    content: () => {
+      return (
+        <div className="text-sm titillium-web">
+        
+        <ul className="flex flex-col ">
+          <div className="flex gap-2 ">
+          <div>
+          ●
+          </div>
+
+          <li>Payment Gateway Integration: Successfully integrated and implemented Razorpay payment gateway, ensuring secure and
+          efficient online transactions</li>
+
+          </div>
+          <div className="flex gap-2">
+          <div>
+          ●
+          </div>
+<div>
+API Integration: Integrated ChatGPT-4 API to deliver instant math solutions, boosting user engagement by 40% and
+enhancing educational support for over 5,000 active users monthly
+</div>
+
+          </div>
+          <div className="flex gap-2 ">
+          <div>
+          ●
+          </div>
+
+<div> Tech Stack: Architected a scalable web application using Tailwind CSS for responsive design, Next.js 13 for optimal
+serverside rendering, and MongoDB for database management</div>
+
+          </div>
+          <div className="flex gap-2 ">
+          <div>
+          ●
+          </div>
+
+<div>Conducted regular maintenance and updates to ensure system efficiency and security.</div>
+
+          </div>
+          
+          
+
+
+        </ul>
+      </div>
       );
     },
   },
+  
+
+  
+  
   {
-    description: "Mustafa Zahid",
-    title: "Toh Phir Aao",
-    src: "https://assets.aceternity.com/demos/toh-phir-aao.jpeg",
+    description: "Self Employed",
+    title: "Freelance",
+    src: "/free.png",
     ctaText: "Play",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
       return (
-        <p>
-          &quot;Aawarapan&quot;, a Bollywood movie starring Emraan Hashmi, is
-          renowned for its intense storyline and powerful performances. Directed
-          by Mohit Suri, the film has become a significant work in the Indian
-          film industry. <br /> <br /> The movie explores themes of love,
-          redemption, and sacrifice, capturing the essence of human emotions and
-          relationships. With a gripping narrative and memorable music,
-          &quot;Aawarapan&quot; has garnered a massive fan following both in
-          India and abroad, solidifying Emraan Hashmi&apos;s status as a
-          versatile actor.
-        </p>
+        <div className="text-sm titillium-web">
+        
+        <ul className="flex flex-col gap-2">
+          <div className="flex gap-2 ">
+          <div>
+          ●
+          </div>
+
+          <li>Collaborated with clients to deliver custom websites aligned with their goals</li>
+
+          </div>
+          <div className="flex gap-2 ">
+          <div>
+          ●
+          </div>
+
+          <li>Designed, developed, and deployed responsive and user-friendly web solutions</li>
+
+          </div>
+          <div className="flex gap-2 ">
+          <div>
+          ●
+          </div>
+
+          <li>Ensured timely project delivery and maintained effective client communication</li>
+
+
+          </div>
+          <div className="flex gap-2 ">
+          <div>
+          ●
+          </div>
+
+          <li>Used tools like React, Next.js, and TailwindCSS for efficient, high-quality builds</li>
+
+
+          </div>
+          <div className="flex gap-2 ">
+          <div>
+          ●
+          </div>
+
+          <li>Optimized websites for speed, SEO, and accessibility</li>
+
+          </div>
+          
+
+
+        </ul>
+      </div>
       );
     },
   },

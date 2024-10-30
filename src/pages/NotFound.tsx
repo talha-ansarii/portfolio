@@ -1,7 +1,9 @@
 
 const NotFound = () => {
   return (
-    <div>404</div>
+    <div className="">
+      <img src="/notFound.svg" alt="Not Found" className="w-full h-full object-cover" />
+    </div>
   )
 }
 

@@ -2,7 +2,6 @@
 import { ReactNode, useEffect, useState } from 'react';
 import Navbar from './Navbar';
 import { IconBrandGithub, IconBrandInstagram, IconBrandLinkedin } from '@tabler/icons-react';
-import { Link } from 'react-router-dom';
 
 interface BlueBackgroundWrapperProps {
     children: ReactNode;
@@ -48,16 +47,28 @@ export default function BlueBackgroundWrapper({ children }: BlueBackgroundWrappe
       <span>{convertToTwoDigit(time.seconds)}</span>
       
     </div>
-    <div className='absolute left-1/2 translate-x-[-50%]   h-[30px] z-[50] bottom-14 md:top-10 md:right-6 flex gap-2'>
-        <Link to={"/"}>
+    <div className='absolute left-1/2 translate-x-[-50%] md:right-6 lg:right-6  h-[30px] z-[10] bottom-[80px]  md:top-10 flex md:hidden gap-2'>
+        <a target='_blank' href={"https://www.linkedin.com/in/talha-ansarii/"}>
     <IconBrandLinkedin className=" text-white hover:scale-110 transition-all duration-100   "  stroke={1.3} size={28} />
-        </Link>
-        <Link to={"/"}>
+        </a>
+        <a target='_blank' href={"https://github.com/talha-ansarii"}>
     <IconBrandGithub className=" text-white hover:scale-110 transition-all duration-100 " stroke={1.3} size={28} />
-        </Link>
-        <Link to={"/"}>
+        </a>
+        <a target='_blank' href={"https://www.instagram.com/talhaansarii/"}>
     <IconBrandInstagram className=" text-white hover:scale-110 transition-all duration-100 " stroke={1.3} size={29} />
-        </Link>
+        </a>
+
+    </div>
+    <div className='absolute hidden md:flex md:right-6 lg:right-6  h-[30px] z-[10] bottom-[80px]  md:top-10  gap-2'>
+        <a target='_blank' href={"https://www.linkedin.com/in/talha-ansarii/"}>
+    <IconBrandLinkedin className=" text-white hover:scale-110 transition-all duration-100   "  stroke={1.3} size={28} />
+        </a>
+        <a target='_blank' href={"https://github.com/talha-ansarii"}>
+    <IconBrandGithub className=" text-white hover:scale-110 transition-all duration-100 " stroke={1.3} size={28} />
+        </a>
+        <a target='_blank' href={"https://www.instagram.com/talhaansarii/"}>
+    <IconBrandInstagram className=" text-white hover:scale-110 transition-all duration-100 " stroke={1.3} size={29} />
+        </a>
 
     </div>
 

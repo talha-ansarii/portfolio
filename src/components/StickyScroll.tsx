@@ -8,19 +8,19 @@ import { StickyScrollMobile } from "./ui/sticky-scroll-reveal-mobile";
 
 const content = [
   {
-    title: "Collaborative Editing",
+    title: "MOVIX",
     description:
-      "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
+      "An application to find ratings and reviews for the latest movies and TV shows. Users can also watch trailers and get recommendations based on their preferences.",
     content: (
         <div className="h-[350px] w-full flex items-center justify-center ">
         <PinContainer
-          title="/ui.aceternity.com"
-          href="https://twitter.com/mannupaaji"
+          title="/movix"
+          href="https://movix-henna-five.vercel.app/"
         >
           <div className="h-full w-full relative  flex items-center justify-center">
-        <DirectionAwareHover imageUrl={"https://images.unsplash.com/photo-1721332154191-ba5f1534266e?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}>
-          <p className="font-bold text-xl">In the mountains</p>
-          <p className="font-normal text-sm">$1299 / night</p>
+        <DirectionAwareHover imageUrl={"/movix1.png"}>
+          <p className="font-bold text-xl">Movix</p>
+          <p className="font-normal text-sm">  </p>
         </DirectionAwareHover>
       </div>
 
@@ -30,19 +30,19 @@ const content = [
   },
 
   {
-    title: "Real time changes",
+    title: "SEVEN BURGERS",
     description:
-      "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
+      "A serverless web application where users can read blogs and explore the restaurant’s infoformation.",
     content: (  
         <div className="h-[350px] w-full flex items-center justify-center ">
         <PinContainer
-          title="/ui.aceternity.com"
-          href="https://twitter.com/mannupaaji"
+          title="/sevenburgerss"
+          href="https://sevenburgerss.netlify.app/"
         >
           <div className="h-full w-full relative  flex items-center justify-center">
-        <DirectionAwareHover imageUrl={"https://images.unsplash.com/photo-1721332149112-c54e68990d99?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}>
-          <p className="font-bold text-xl">In the mountains</p>
-          <p className="font-normal text-sm">$1299 / night</p>
+        <DirectionAwareHover imageUrl={"/seven1.png"}>
+          <p className="font-bold text-xl">Seven Burgers</p>
+          <p className="font-normal text-sm"></p>
         </DirectionAwareHover>
       </div>
 
@@ -51,19 +51,19 @@ const content = [
     ),
   },
   {
-    title: "Version control",
+    title: "E-commerce API",
     description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+      "Developed a RESTful API for an E-commerce application allowing management of products, categories, and user authentication",
     content: (
         <div className="h-[350px] w-full flex items-center justify-center ">
         <PinContainer
-          title="/ui.aceternity.com"
-          href="https://twitter.com/mannupaaji"
+          title="/api-docs/"
+          href="https://web-production-3594.up.railway.app/api-docs/"
         >
           <div className="h-full w-full relative  flex items-center justify-center">
-        <DirectionAwareHover imageUrl={"https://images.unsplash.com/photo-1726996155615-e986ed87c9d4?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}>
-          <p className="font-bold text-xl">In the mountains</p>
-          <p className="font-normal text-sm">$1299 / night</p>
+        <DirectionAwareHover imageUrl={"/ecom.png"}>
+          <p className="font-bold text-xl">Api Docs</p>
+          <p className="font-normal text-sm"></p>
         </DirectionAwareHover>
       </div>
 
@@ -72,19 +72,19 @@ const content = [
     ),
   },
   {
-    title: "Running out of content",
+    title: "SUMZ",
     description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+      "Simplify your reading with Sumz, an open-source article summarizer that transforms lengthy articles into clear and consise summaries.",
     content: (
         <div className="h-[350px] w-full flex items-center justify-center ">
         <PinContainer
-          title="/ui.aceternity.com"
-          href="https://twitter.com/mannupaaji"
+          title="/sumz"
+          href="https://talha-sumz.netlify.app"
         >
           <div className="h-full w-full relative  flex items-center justify-center">
-        <DirectionAwareHover imageUrl={"https://images.unsplash.com/photo-1727102406027-e7ae00b762b9?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}>
-          <p className="font-bold text-xl">In the mountains</p>
-          <p className="font-normal text-sm">$1299 / night</p>
+        <DirectionAwareHover imageUrl={"/sumz.png"}>
+          <p className="font-bold text-xl">SUMZ</p>
+          <p className="font-normal text-sm"></p>
         </DirectionAwareHover>
       </div>
 
@@ -95,49 +95,69 @@ const content = [
 ];
 const contentMobile = [
   {
-    title: "Collaborative Editing",
+    title: "MOVIX",
     description:
-      "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
+      "An application to find ratings and reviews for the latest movies and TV shows. Users can also watch trailers and get recommendations based on their preferences.",
     content: (
         <div className="h-[350px] w-full flex items-center justify-center ">
         
       </div>
     ),
-    modal : <AnimatedModalDemo/>
+    modal : <AnimatedModalDemo content={{text:"An application to find ratings and reviews for the latest movies and TV shows. Users can also watch trailers and get recommendations based on their preferences.",
+      link : "https://movix-henna-five.vercel.app/",
+      images : ["/movix1.png","/movix2.png","/movix3.png","/movix4.png","/movix5.png"],
+      title : "Seven Burgers" ,
+      linkText : "/movix"
+    }}/>
   },
 
   {
-    title: "Real time changes",
+    title: "SEVEN BURGERS",
     description:
-      "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
+      "A serverless web application where users can read blogs and explore the restaurant’s infoformation.",
     content: (  
         <div className="h-[350px] w-full flex items-center justify-center ">
         
       </div>
     ),
-    modal : <AnimatedModalDemo/>
+    modal : <AnimatedModalDemo content={{text:"A serverless web application where users can read blogs and explore the restaurant’s infoformation.",
+      link : "https://sevenburgerss.netlify.app/",
+      images : ["seven1.png","seven2.png","seven3.png","seven4.png","seven5.png"],
+      title : "Seven Burgers" ,
+      linkText : "/sb"
+    }}/>
   },
   {
-    title: "Version control",
+    title: "E-commerce API",
     description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+      "Developed a RESTful API for an E-commerce application allowing management of products, categories, and user authentication",
     content: (
         <div className="h-[350px] w-full flex items-center justify-center ">
         
       </div>
     ),
-    modal : <AnimatedModalDemo/>
+    modal : <AnimatedModalDemo content={{text:"Developed a RESTful API for an E-commerce application allowing management of products, categories, and user authentication.",
+      link : "https://web-production-3594.up.railway.app/api-docs/",
+      images : ["ecom.png","ecom2.png","ecom3.png","ecom4.png","ecom5.png"],
+      title : "E-commerce API" ,
+      linkText : "/api"
+    }}/>
   },
   {
-    title: "Running out of content",
+    title: "SUMZ",
     description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+      "Simplify your reading with Sumz, an open-source article summarizer that transforms lengthy articles into clear and consise summaries.",
     content: (
         <div className="h-[350px] w-full flex items-center justify-center ">
       
       </div>
     ),
-    modal : <AnimatedModalDemo/>
+    modal : <AnimatedModalDemo content={{text:"Simplify your reading with Sumz, an open-source article summarizer that transforms lengthy articles into clear and consise summaries.",
+      link : "https://talha-sumz.netlify.app",
+      images : ["sumz.png","sumz2.png","sumz3.png","sumz4.png","sumz5.png"],
+      title : "SUMZ" ,
+      linkText : "/sumz"
+    }} />
   },
 ];
 export function StickyScrollRevealDemo() {

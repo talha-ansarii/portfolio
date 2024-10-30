@@ -3,6 +3,7 @@ import { Button } from '../../components/ui/button';
 import { Input } from '../../components/ui/input';
 import { Textarea } from '../../components/ui/textarea';
 import emailjs from 'emailjs-com';
+import { motion } from 'framer-motion'; // Import Framer Motion
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -44,23 +45,39 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex items-center justify-center p-4">
-      <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-        <div className="space-y-4">
-          <h1
+    <motion.div
+      className="flex items-center justify-center p-4"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.6 }}
+    >
+      <motion.div
+        className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
+        <motion.div className="space-y-4">
+          <motion.h1
             className="text-4xl md:text-6xl font-bold text-white"
-            style={{
-              textTransform: 'uppercase',
-              letterSpacing: '0.05em',
-            }}
+            style={{ textTransform: 'uppercase', letterSpacing: '0.05em' }}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
           >
             LET&apos;S MAKE
             <br />
             SOMETHING
             <br />
             AMAZING!
-          </h1>
-          <div className="items-center space-x-4 hidden md:flex">
+          </motion.h1>
+
+          <motion.div
+            className="items-center space-x-4 hidden md:flex"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
             <div className="w-16 h-16 rounded-full overflow-hidden">
               <img src="/profile.jpeg" alt="Profile" className="w-full h-full object-cover" />
             </div>
@@ -68,10 +85,15 @@ const Contact = () => {
               <h2 className="text-xl font-semibold">Talha Ansari</h2>
               <p className="text-[#EFF1C5] opacity-80">talhaansari1606@gmail.com</p>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
-        <div className="bg-[#2a2a3e] rounded-3xl p-6 space-y-4">
+        <motion.div
+          className="bg-[#2a2a3e] rounded-3xl p-6 space-y-4"
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+        >
           <form onSubmit={handleSubmit} className="space-y-4">
             <Input
               placeholder="Name"
@@ -99,11 +121,25 @@ const Contact = () => {
             >
               {isSubmitting ? 'Sending...' : 'Submit'}
             </Button>
-            {successMessage && <p className="text-green-500 mt-2">{successMessage}</p>}
+            {successMessage && (
+              <motion.p
+                className="text-green-500 mt-2"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                {successMessage}
+              </motion.p>
+            )}
           </form>
-        </div>
+        </motion.div>
 
-        <div className="items-center space-x-4 flex md:hidden">
+        <motion.div
+          className="items-center space-x-4 flex md:hidden"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1 }}
+        >
           <div className="w-16 h-16 rounded-full overflow-hidden">
             <img src="/profile.jpeg" alt="Profile" className="w-full h-full object-cover" />
           </div>
@@ -111,9 +147,9 @@ const Contact = () => {
             <h2 className="text-xl font-semibold">Talha Ansari</h2>
             <p className="text-[#EFF1C5] opacity-80">talhaansari1606@gmail.com</p>
           </div>
-        </div>
-      </div>
-    </div>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 };
 

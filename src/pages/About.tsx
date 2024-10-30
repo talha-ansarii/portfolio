@@ -9,7 +9,7 @@ const About = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="text-white text-center text-6xl font-bold mb-6"
       >
-        About
+        About Me
       </motion.div>
 
       <motion.div
