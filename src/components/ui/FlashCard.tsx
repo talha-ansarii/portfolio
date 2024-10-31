@@ -123,7 +123,7 @@ export function ExpandableCardDemo() {
             layoutId={`card-${card.title}-${id}`}
             key={`card-${card.title}-${id}`}
             onClick={() => setActive(card)}
-            className="p-4  flex flex-col mt-2 h-[200px]  md:w-auto  w-[150px] bg-gray-500 transition-all duration-300 md:flex-row group justify-between items-center hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
+            className="p-4  flex flex-col mt-2 h-[200px]   md:h-auto  md:w-auto  w-[150px] bg-gray-500 transition-all duration-300 md:flex-row group justify-between items-center hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
           >
             <div className="flex gap-4 flex-col md:flex-row ">
               <motion.div layoutId={`image-${card.title}-${id}`}>
@@ -132,19 +132,19 @@ export function ExpandableCardDemo() {
                   height={100}
                   src={card.src}
                   alt={card.title}
-                  className="h-24 w-40  rounded-lg object-cover object-center"
+                  className="h-24 w-40 md:w-10 md:h-10  rounded-lg object-cover object-center"
                 />
               </motion.div>
               <div className="">
                 <motion.h3
                   layoutId={`title-${card.title}-${id}`}
-                  className=" md:text-md text-xs font-bold group-hover:text-neutral-800 text-neutral-100 text-center md:text-left"
+                  className=" md:text-[15px] text-xs font-bold group-hover:text-neutral-800 text-neutral-100 text-center md:text-left"
                 >
                   {card.title}
                 </motion.h3>
                 <motion.p
                   layoutId={`description-${card.description}-${id}`}
-                  className="text-neutral-700 text-xs md:text-sm dark:text-neutral-400 text-center md:text-left"
+                  className="text-neutral-700 text-xs md:text-xs dark:text-neutral-400 text-center md:text-left"
                 >
                   {card.description}
                 </motion.p>

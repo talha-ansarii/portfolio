@@ -7,6 +7,7 @@ import Projects from "./pages/Projects"
 import Skills from "./pages/Skills"
 import Journey from "./pages/Journey"
 import BlueBackgroundWrapper from "./components/BlueBackgroundWrapper"
+import Game from "./pages/Game"
 
 function App() {
 
@@ -21,7 +22,8 @@ function App() {
 <Route path="/contact" element={<Contact/>} />
 <Route path="/Projects" element={<Projects/>} />
 <Route path="/skills" element={<Skills/>} />
-<Route path="/journey" element={<Journey/>} />
+<Route path="/experience" element={<Journey/>} />
+<Route path="/game" element={<Game/>} />
 <Route path="*" element={<NotFound/>} />
 </Routes>
 </BlueBackgroundWrapper>

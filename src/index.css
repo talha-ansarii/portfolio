@@ -33,6 +33,49 @@
 
 
 
+
+
+.reference-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #aaa9a9;
+  /* Add a border for consistency */
+  padding: 10px;
+  /* Add some padding around the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Add shadow for depth */
+}
+
+.reference-image img {
+  display: block;
+  /* Remove any default inline spacing */
+  max-width: 100px;
+}
+
+.puzzle-container {
+  width: 300px;
+  height: 300px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  border: 5px solid #aaa9a9;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  /* Add a larger shadow for a 3D effect */
+  background: #ddd;
+  /* Light background for the gaps */
+}
+
+.puzzle-piece {
+  width: 100%;
+  height: 100%;
+  background-size: 400px 400px;
+  cursor: grab;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+  /* Add inset shadow for each piece */
+}
+
+
 body{
   background-color: #1a1a1a;
   /* overflow: hidden; Hide scrollbars */

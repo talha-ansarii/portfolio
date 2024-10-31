@@ -1,6 +1,7 @@
 import { FloatingDock } from "./ui/floating-dock";
 import {
   IconBulb,
+  IconDeviceGamepad,
   IconDeviceLaptop,
   IconDeviceMobileMessage,
   IconHome,
@@ -53,6 +54,13 @@ const Navbar = () => {
         <IconDeviceMobileMessage className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "/contact",
+    },
+    {
+      title: "Game",
+      icon: (
+        <IconDeviceGamepad className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "/game",
     }
   ];
 
