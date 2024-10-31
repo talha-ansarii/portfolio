@@ -56,14 +56,6 @@
 
 
 
-.puzzle-piece {
-  width: 100%;
-  height: 100%;
-  background-size: 400px 400px;
-  cursor: grab;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
-  /* Add inset shadow for each piece */
-}
 
 
 body{

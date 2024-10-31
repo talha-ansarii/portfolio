@@ -5,7 +5,7 @@ const PuzzleGame: React.FC = () => {
   const [imgUrl, setImgUrl] = useState("profile.png"); // Default image
   const [positions, setPositions] = useState<number[]>([...Array(16).keys()]);
   const [selectedPiece, setSelectedPiece] = useState<number | null>(null); // Track selected piece for mobile
-  const pieceSize = 80; // Adjust piece size for mobile screens
+  const pieceSize = 60; // Adjust piece size for mobile screens
 
   useEffect(() => {
     setPositions((prevPositions) => {
@@ -60,10 +60,10 @@ const PuzzleGame: React.FC = () => {
   return (
     <div className="game-container flex flex-col justify-center gap-6 items-center md:flex-row">
       <div
-        className="puzzle-container grid grid-cols-4 bg-white"
+        className="puzzle-container border-[3px] border-[#aaa9a9] grid grid-cols-4 bg-white"
         style={{
-          width: pieceSize * 4, 
-          height: pieceSize * 4,
+          width: pieceSize * 4.1, 
+          height: pieceSize * 4.1,
         }}
       >
         {positions.map((pos, index) => {
@@ -90,7 +90,7 @@ const PuzzleGame: React.FC = () => {
         })}
       </div>
 
-      <div className="flex flex-col items-center gap-2 mt-4 md:mt-0">
+      <div className="flex flex-col items-center gap-2 mt-1 md:mt-0">
         <div className="reference-image mb-4">
           <img src={imgUrl} alt="Reference" className="w-32 h-32 object-cover" />
         </div>
