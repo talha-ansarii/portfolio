@@ -59,7 +59,7 @@ export function ExpandableCardDemo() {
                   duration: 0.05,
                 },
               }}
-              className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-6 w-6"
+              className="flex absolute  top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-6 w-6"
               onClick={() => setActive(null)}
             >
               <CloseIcon />
@@ -117,13 +117,13 @@ export function ExpandableCardDemo() {
           </div>
         ) : null}
       </AnimatePresence>
-      <ul className=" mx-auto  overflow-hidden  h-full md:h-full w-full ml-2 md:block grid grid-cols-2 md:w-[50%]   gap-2 md:gap-4">
+      <ul className=" mx-auto  h-full md:h-full w-full md:block flex flex-wrap justify-center items-center grid-cols-2 md:w-[50%] gap-2 md:gap-4">
         {cards.map((card) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
             key={`card-${card.title}-${id}`}
             onClick={() => setActive(card)}
-            className="p-4  flex flex-col mt-2   md:w-auto  w-[150px] bg-gray-500 transition-all duration-300 md:flex-row group justify-between items-center hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
+            className="p-4  flex flex-col mt-2 h-[200px]  md:w-auto  w-[150px] bg-gray-500 transition-all duration-300 md:flex-row group justify-between items-center hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
           >
             <div className="flex gap-4 flex-col md:flex-row ">
               <motion.div layoutId={`image-${card.title}-${id}`}>
