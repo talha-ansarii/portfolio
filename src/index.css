@@ -54,16 +54,8 @@
 }
 
 .puzzle-container {
-  width: 300px;
-  height: 300px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2px;
-  border: 5px solid #aaa9a9;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  /* Add a larger shadow for a 3D effect */
-  background: #ddd;
-  /* Light background for the gaps */
+  
+  
 }
 
 .puzzle-piece {

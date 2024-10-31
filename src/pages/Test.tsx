@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Input } from "../../components/ui/input";
 
-// Define the PuzzleGame component
 const PuzzleGame: React.FC = () => {
   const [imgUrl, setImgUrl] = useState("profile.png"); // Default image
   const [positions, setPositions] = useState<number[]>([...Array(16).keys()]);
+  const pieceSize = 80; // Adjust piece size for mobile screens
 
   useEffect(() => {
-    // Shuffle the positions for the initial puzzle setup
     setPositions((prevPositions) => {
       const newPos = [...prevPositions];
       newPos.sort(() => Math.random() - 0.5);
@@ -33,10 +32,7 @@ const PuzzleGame: React.FC = () => {
 
     setPositions((prevPositions) => {
       const newPos = [...prevPositions];
-      [newPos[originalPosition], newPos[position]] = [
-        newPos[position],
-        newPos[originalPosition],
-      ];
+      [newPos[originalPosition], newPos[position]] = [newPos[position], newPos[originalPosition]];
       return newPos;
     });
   };
@@ -46,46 +42,52 @@ const PuzzleGame: React.FC = () => {
   };
 
   return (
-    <div className="game-container flex flex-col justify-center gap-6 items-center md:flex-row  ">
-     
-
-      <div className="puzzle-container">
+    <div className="game-container flex flex-col justify-center gap-6 items-center md:flex-row">
+      <div
+        className="puzzle-container grid grid-cols-4 bg-white"
+        style={{
+          width: pieceSize * 4, 
+          height: pieceSize * 4,
+        }}
+      >
         {positions.map((pos, index) => {
-          const x = (pos % 4) * 100;
-          const y = Math.floor(pos / 4) * 100;
+          const x = (pos % 4) * pieceSize;
+          const y = Math.floor(pos / 4) * pieceSize;
           return (
             <div
               key={index}
-              className="puzzle-piece"
+              className="puzzle-piece "
               draggable
               onDragStart={(e) => handleDragStart(e, index)}
               onDrop={(e) => handleDrop(e, index)}
               onDragOver={handleDragOver}
               style={{
+                width: pieceSize,
+                height: pieceSize,
                 backgroundImage: `url('${imgUrl}')`,
                 backgroundPosition: `-${x}px -${y}px`,
+                backgroundSize: `${pieceSize * 4}px ${pieceSize * 4}px`,
               }}
             />
           );
         })}
       </div>
 
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col items-center gap-2 mt-4 md:mt-0">
+        <div className="reference-image mb-4">
+          <img src={imgUrl} alt="Reference" className="w-32 h-32 object-cover" />
+        </div>
 
-<div className="reference-image">
-  <img src={imgUrl} alt="Reference" />
-</div>
-
-<label className="custom-file-upload mb-4 text-center cursor-pointer bg-[#EFF1C5] px-4 py-2 rounded  transition">
-  Upload Image
-  <Input
-    type="file"
-    accept="image/*"
-    onChange={handleImageUpload}
-    className="hidden"
-  />
-</label>
-</div>
+        <label className="custom-file-upload text-center cursor-pointer bg-[#EFF1C5] px-4 py-2 rounded transition">
+          Upload Image
+          <Input
+            type="file"
+            accept="image/*"
+            onChange={handleImageUpload}
+            className="hidden"
+          />
+        </label>
+      </div>
     </div>
   );
 };
