@@ -58,7 +58,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="flex relative z-[50] mt-[-35px] justify-center items-end ">
+      <div className="flex relative z-[50] mt-[-70px] md:mt-[-35px] justify-center items-end ">
       <FloatingDock
         items={links}
       />
