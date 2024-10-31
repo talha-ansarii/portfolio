@@ -8,7 +8,7 @@ const Journey = () => {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="text-3xl sm:text-2xl z-[10]  md:top-[-50px] top-[-5px] left-1/2 translate-x-[-50%] md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-4 sm:py-8 text-center"
+        className="text-2xl   z-[10]  md:top-[-50px] top-[-50px] mt-[-50px] md:mt-0 left-1/2 translate-x-[-50%] md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-4 sm:py-8 text-center"
       >
         My Experience
       </motion.div>

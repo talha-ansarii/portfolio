@@ -128,7 +128,7 @@ export const ParallaxScrollSecond = ({
             >
               <img
                 src={el}
-                className="object-cover w-24 h-24 object-left-top peer rounded-lg gap-10 !m-0 !p-0"
+                className="object-cover w-20 h-20 object-left-top peer rounded-lg gap-10 !m-0 !p-0"
                 height="400"
                 width="400"
                 alt="thumbnail"
@@ -143,7 +143,7 @@ export const ParallaxScrollSecond = ({
             <motion.div key={"grid-2 " + idx}>
               <img
                 src={el}
-                className="object-cover w-24 h-24 object-left-top peer rounded-lg gap-10 !m-0 !p-0"
+                className="object-cover w-20 h-20 object-left-top peer rounded-lg gap-10 !m-0 !p-0"
                 height="400"
                 width="400"
                 alt="thumbnail"
@@ -165,7 +165,7 @@ export const ParallaxScrollSecond = ({
             >
               <img
                 src={el}
-                className="w-24 h-24 object-cover peer object-left-top rounded-lg gap-10 !m-0 !p-0"
+                className="w-20 h-20 object-cover peer object-left-top rounded-lg gap-10 !m-0 !p-0"
                 height="400"
                 width="400"
                 alt="thumbnail"

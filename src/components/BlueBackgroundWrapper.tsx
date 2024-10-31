@@ -34,13 +34,13 @@ export default function BlueBackgroundWrapper({ children }: BlueBackgroundWrappe
 
     return (
 
-        <div className="relative h-[calc(100vh-50px)] mt-[25px] w-[calc(100vw-50px)] ml-[25px] md:h-[calc(100vh-100px)] md:w-[calc(100vw-100px)] md:mt-[50px] md:ml-[50px] rounded-[50px] bg-[#202030]">
-              <div className="h-full w-full  bg-[#202030] rounded-[50px] bg-grid-small-white/[0.3] relative flex items-center justify-center">
-       <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] rounded-[50px]"></div>
+        <div className="relative h-[calc(100vh-20px)] mt-[10px] w-[calc(100vw-20px)] ml-[10px] md:h-[calc(100vh-100px)] md:w-[calc(100vw-100px)] md:mt-[50px] md:ml-[50px] rounded-[20px] md:rounded-[50px] bg-[#202030]">
+              <div className="h-full w-full  bg-[#202030] rounded-[20px] md:rounded-[50px] bg-grid-small-white/[0.3] relative flex items-center justify-center">
+       <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] rounded-[20px] md:rounded-[50px]"></div>
       
       {children}
     </div>
-    <div className='clock text-white absolute z-[50] top-10 left-6 '>
+    <div className='clock text-white absolute z-[50] top-5 md:top-10 left-6 '>
         <span className='text-[#EFF1C5]'>Local Time : </span>
       <span>{convertToTwoDigit(time.hours)}:</span>
       <span>{convertToTwoDigit(time.minutes)}:</span>

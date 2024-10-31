@@ -59,7 +59,7 @@ const Contact = () => {
       >
         <motion.div className="space-y-4">
           <motion.h1
-            className="text-4xl md:text-6xl font-bold text-white"
+            className="text-2xl text-center md:text-left   md:text-6xl font-bold text-white"
             style={{ textTransform: 'uppercase', letterSpacing: '0.05em' }}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -89,7 +89,7 @@ const Contact = () => {
         </motion.div>
 
         <motion.div
-          className="bg-[#2a2a3e] rounded-3xl p-6 space-y-4"
+          className="bg-[#2a2a3e] = rounded-3xl p-6 space-y-4"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
@@ -97,26 +97,26 @@ const Contact = () => {
           <form onSubmit={handleSubmit} className="space-y-4">
             <Input
               placeholder="Name"
-              className="bg-[#3a3a4e] border-0 text-white placeholder:text-gray-400 h-12"
+              className="bg-[#3a3a4e] border-0  text-white placeholder:text-gray-400 md:h-12"
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             />
             <Input
               type="email"
               placeholder="Email"
-              className="bg-[#3a3a4e] border-0 text-white placeholder:text-gray-400 h-12"
+              className="bg-[#3a3a4e] border-0 text-white placeholder:text-gray-400 md:h-12"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             />
             <Textarea
               placeholder="Message"
-              className="bg-[#3a3a4e] border-0 text-white placeholder:text-gray-400 min-h-[160px] resize-none"
+              className="bg-[#3a3a4e] border-0 text-white placeholder:text-gray-400 md:min-h-[160px] resize-none"
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
             />
             <Button
               type="submit"
-              className="w-full bg-[#EFF1C5] hover:bg-[#e5e5cc] text-black font-semibold h-12 rounded-xl"
+              className="w-full bg-[#EFF1C5] hover:bg-[#e5e5cc] text-black font-semibold h-10 md:h-12 rounded-xl"
               disabled={isSubmitting}
             >
               {isSubmitting ? 'Sending...' : 'Submit'}
@@ -140,12 +140,12 @@ const Contact = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
         >
-          <div className="w-16 h-16 rounded-full overflow-hidden">
+          <div className="w-12 h-12 md:w-16 md:h-16 rounded-full overflow-hidden">
             <img src="/profile.jpeg" alt="Profile" className="w-full h-full object-cover" />
           </div>
           <div className="text-white">
-            <h2 className="text-xl font-semibold">Talha Ansari</h2>
-            <p className="text-[#EFF1C5] opacity-80">talhaansari1606@gmail.com</p>
+            <h2 className="text-lg md:text-xl font-semibold">Talha Ansari</h2>
+            <p className="text-[#EFF1C5] text-sm md:text-md opacity-80">talhaansari1606@gmail.com</p>
           </div>
         </motion.div>
       </motion.div>

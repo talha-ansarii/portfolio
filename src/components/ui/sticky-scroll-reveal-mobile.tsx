@@ -57,7 +57,7 @@ export const StickyScrollMobile = ({
       <div className="div relative flex  justify-center items-start text-center my-4 md:px-4">
         <div className="max-w-2xl">
           {content.map((item, index) => (
-            <div key={item.title + index} className="my-20">
+            <div key={item.title + index} className="my-10">
               <motion.h2
                 initial={{
                   opacity: 0,
