@@ -89,6 +89,9 @@ const PuzzleGame: React.FC = () => {
           );
         })}
       </div>
+      <p className="md:hidden text-xs my-[-10px] text-center text-neutral-300">
+        Tap on two pieces to swap them.
+      </p>
 
       <div className="flex flex-col items-center gap-2 mt-1 md:mt-0">
         <div className="reference-image mb-4">
