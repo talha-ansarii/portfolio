@@ -81,19 +81,19 @@ export function ExpandableCardDemo() {
               </motion.div>
 
               <div>
-                <div className="flex justify-between items-start mb-[-10px] px-4">
+                <div className="flex mt-2 justify-between items-start mb-[-10px] px-4">
                   <div className="">
                     <motion.h3
                       layoutId={`title-${active.title}-${id}`}
-                      className="font-bold text-neutral-200"
+                      className="font-bold text-md text-neutral-200"
                     >
-                      {active.title}
+                      {active.title} 
                     </motion.h3>
                     <motion.p
                       layoutId={`description-${active.description}-${id}`}
-                      className="text-neutral-400"
+                      className="text-neutral-400 text-sm"
                     >
-                      {active.description}
+                      {active.description} 
                     </motion.p>
                   </div>
 
@@ -105,7 +105,7 @@ export function ExpandableCardDemo() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="  text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                    className="  text-xs md:text-sm lg:text-base  md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto text-neutral-400  [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
                   >
                     {typeof active.content === "function"
                       ? active.content()
@@ -117,13 +117,13 @@ export function ExpandableCardDemo() {
           </div>
         ) : null}
       </AnimatePresence>
-      <ul className=" mx-auto  overflow-hidden  h-full md:h-full w-full  md:block grid grid-cols-2 md:w-[50%] gap-4">
+      <ul className=" mx-auto  overflow-hidden  h-full md:h-full w-full ml-2 md:block grid grid-cols-2 md:w-[50%]   gap-2 md:gap-4">
         {cards.map((card) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
             key={`card-${card.title}-${id}`}
             onClick={() => setActive(card)}
-            className="p-4  flex flex-col mt-2  bg-gray-500 transition-all duration-300 md:flex-row group justify-between items-center hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
+            className="p-4  flex flex-col mt-2   md:w-auto  w-[150px] bg-gray-500 transition-all duration-300 md:flex-row group justify-between items-center hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
           >
             <div className="flex gap-4 flex-col md:flex-row ">
               <motion.div layoutId={`image-${card.title}-${id}`}>

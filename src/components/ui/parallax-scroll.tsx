@@ -112,7 +112,7 @@ export const ParallaxScrollSecond = ({
         </div>
       </div>
       <div
-        className=" grid-cols-3 grid md:hidden  md:grid-cols-2 lg:grid-cols-3 items-start justify-center max-w-5xl mx-auto gap-x-16 py-40 px-10"
+        className=" grid-cols-3  ml-4 md:ml-0 grid md:hidden  md:grid-cols-2 lg:grid-cols-3 items-start justify-center max-w-5xl mx-auto gap-x-16 py-40 px-10"
         ref={gridRef}
       >
         

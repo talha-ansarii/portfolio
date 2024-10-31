@@ -135,7 +135,7 @@ const Contact = () => {
         </motion.div>
 
         <motion.div
-          className="items-center space-x-4 flex md:hidden"
+          className="items-center mt-[-20px] space-x-4 flex md:hidden"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
