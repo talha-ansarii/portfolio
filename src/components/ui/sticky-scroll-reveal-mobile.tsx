@@ -30,8 +30,8 @@ export const StickyScrollMobile = ({
     const cardsBreakpoints = content.map((_, index) => index / cardLength);
     const closestBreakpointIndex = cardsBreakpoints.reduce(
       (acc, breakpoint, index) => {
-        const distance = Math.abs(latest - breakpoint);
-        if (distance < Math.abs(latest - cardsBreakpoints[acc])) {
+        const distance = Math.abs(latest*1.5 - breakpoint);
+        if (distance < Math.abs(latest*1.5 - cardsBreakpoints[acc])) {
           return index;
         }
         return acc;
@@ -51,11 +51,11 @@ export const StickyScrollMobile = ({
   return (
     <motion.div
     
-      className="md:h-[350px] flex mt-10 md:hidden  h-[250px] bg-re-100 overflow-y-auto no-scrollbar   justify-center relative space-x-10 rounded-md "
+      className="md:h-[350px]  flex mt-20 md:hidden h-[250px] bg-re-100 overflow-y-auto no-scrollbar justify-center relative space-x-10 rounded-md "
       ref={ref}
     >
-      <div className="div relative flex  justify-center items-start text-center my-4 md:px-4">
-        <div className="max-w-2xl">
+      <div className="div flex  justify-center items-start text-center  md:px-4">
+        <div className="w-2xl">
           {content.map((item, index) => (
             <div key={item.title + index} className="my-10">
               <motion.h2
@@ -76,7 +76,7 @@ export const StickyScrollMobile = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-kg text-center text-slate-300 max-w-sm "
+                className="text-kg text-center border-green-400 text-slate-300 max-w-sm "
               >
                 {
                   item.modal
@@ -84,7 +84,7 @@ export const StickyScrollMobile = ({
               </motion.p>
             </div>
           ))}
-          {/* <div className="h-40" /> */}
+          <div className="h-[100px]" />
         </div>
       </div>
       <div
