@@ -56,7 +56,7 @@ const Navbar = () => {
       href: "/contact",
     },
     {
-      title: "Game",
+      title: "Fun",
       icon: (
         <IconDeviceGamepad className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
