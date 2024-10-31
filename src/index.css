@@ -50,13 +50,11 @@
 .reference-image img {
   display: block;
   /* Remove any default inline spacing */
-  max-width: 100px;
+
+
 }
 
-.puzzle-container {
-  
-  
-}
+
 
 .puzzle-piece {
   width: 100%;

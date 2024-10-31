@@ -4,6 +4,7 @@ import { Input } from "../../components/ui/input";
 const PuzzleGame: React.FC = () => {
   const [imgUrl, setImgUrl] = useState("profile.png"); // Default image
   const [positions, setPositions] = useState<number[]>([...Array(16).keys()]);
+  const [selectedPiece, setSelectedPiece] = useState<number | null>(null); // Track selected piece for mobile
   const pieceSize = 80; // Adjust piece size for mobile screens
 
   useEffect(() => {
@@ -41,6 +42,21 @@ const PuzzleGame: React.FC = () => {
     e.preventDefault();
   };
 
+  // Handle piece selection and swapping for mobile
+  const handlePieceClick = (position: number) => {
+    if (selectedPiece === null) {
+      setSelectedPiece(position); // Select first piece
+    } else {
+      // Swap with selected piece and reset selection
+      setPositions((prevPositions) => {
+        const newPos = [...prevPositions];
+        [newPos[selectedPiece], newPos[position]] = [newPos[position], newPos[selectedPiece]];
+        return newPos;
+      });
+      setSelectedPiece(null);
+    }
+  };
+
   return (
     <div className="game-container flex flex-col justify-center gap-6 items-center md:flex-row">
       <div
@@ -56,11 +72,12 @@ const PuzzleGame: React.FC = () => {
           return (
             <div
               key={index}
-              className="puzzle-piece "
+              className={`puzzle-piece ${selectedPiece === index ? "border-2 border-blue-500" : ""}`}
               draggable
               onDragStart={(e) => handleDragStart(e, index)}
               onDrop={(e) => handleDrop(e, index)}
               onDragOver={handleDragOver}
+              onClick={() => handlePieceClick(index)} // Handle click for mobile
               style={{
                 width: pieceSize,
                 height: pieceSize,
