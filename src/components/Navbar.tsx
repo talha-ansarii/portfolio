@@ -47,6 +47,13 @@ const Navbar = () => {
       ),
       href: "/projects",
     },
+    {
+      title: "Fun",
+      icon: (
+        <IconDeviceGamepad className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "/game",
+    },
  
     {
       title: "Contact",
@@ -54,13 +61,6 @@ const Navbar = () => {
         <IconDeviceMobileMessage className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "/contact",
-    },
-    {
-      title: "Fun",
-      icon: (
-        <IconDeviceGamepad className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "/game",
     }
   ];
 
