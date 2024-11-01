@@ -5,7 +5,7 @@ const PuzzleGame: React.FC = () => {
   const [imgUrl, setImgUrl] = useState("profile.png"); // Default image
   const [positions, setPositions] = useState<number[]>([...Array(16).keys()]);
   const [selectedPiece, setSelectedPiece] = useState<number | null>(null); // Track selected piece for mobile
-  const pieceSize = 60; // Adjust piece size for mobile screens
+  const pieceSize = 50; // Adjust piece size for mobile screens
 
   useEffect(() => {
     setPositions((prevPositions) => {
@@ -93,12 +93,12 @@ const PuzzleGame: React.FC = () => {
         Tap on two pieces to swap them.
       </p>
 
-      <div className="flex flex-col items-center gap-2 mt-1 md:mt-0">
+      <div className="flex flex-col items-center gap-2 mt-0 md:mt-0">
         <div className="reference-image mb-4">
           <img src={imgUrl} alt="Reference" className="w-32 h-32 object-cover" />
         </div>
 
-        <label className="custom-file-upload text-center cursor-pointer bg-[#EFF1C5] px-4 py-2 rounded transition">
+        <label className="custom-file-upload text-center cursor-pointer mt-[-10px] bg-[#EFF1C5] px-4 py-0 rounded transition">
           Upload Image
           <Input
             type="file"

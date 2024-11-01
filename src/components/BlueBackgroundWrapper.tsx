@@ -6,7 +6,7 @@ import FunFact from './Fact';
 interface BlueBackgroundWrapperProps {
     children: ReactNode;
 }
-
+ 
 export default function BlueBackgroundWrapper({ children }: BlueBackgroundWrapperProps) {
 
 
