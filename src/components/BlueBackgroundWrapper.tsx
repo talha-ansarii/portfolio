@@ -1,35 +1,16 @@
-// components/BlueBackgroundWrapper.js
-import { ReactNode, useEffect, useState } from 'react';
+import { ReactNode } from 'react';
 import Navbar from './Navbar';
 import { IconBrandGithub, IconBrandInstagram, IconBrandLinkedin } from '@tabler/icons-react';
+import FunFact from './Fact';
 
 interface BlueBackgroundWrapperProps {
     children: ReactNode;
 }
 
 export default function BlueBackgroundWrapper({ children }: BlueBackgroundWrapperProps) {
-    const [time, setTime] = useState({
-        minutes: new Date().getMinutes(),
-        hours: new Date().getHours(),
-        seconds: new Date().getSeconds()
-      })
-    useEffect(() : any => {
-        const intervalId = setInterval(() => {
-          const date = new Date();
-          setTime({
-            minutes: date.getMinutes(),
-            hours: date.getHours(),
-            seconds: date.getSeconds()
-          })
-        }, 1000)
-        return () => clearInterval(intervalId);
-    }, [])
 
-    const convertToTwoDigit = (number : any) => {
-        return number.toLocaleString('en-US', {
-          minimumIntegerDigits: 2
-        })
-      }
+
+  
 
 
     return (
@@ -41,10 +22,8 @@ export default function BlueBackgroundWrapper({ children }: BlueBackgroundWrappe
       {children}
     </div>
     <div className='clock text-white absolute z-[50] top-5 md:top-10 left-6 '>
-        <span className='text-[#EFF1C5]'>Local Time : </span>
-      <span>{convertToTwoDigit(time.hours)}:</span>
-      <span>{convertToTwoDigit(time.minutes)}:</span>
-      <span>{convertToTwoDigit(time.seconds)}</span>
+        <span className='text-[#EFF1C5]'>Did you know? </span>
+      <FunFact/>
       
     </div>
     <div className='absolute left-1/2 translate-x-[-50%] md:right-6 lg:right-6  h-[30px] z-[10] bottom-[80px]  md:top-10 flex md:hidden gap-2'>
