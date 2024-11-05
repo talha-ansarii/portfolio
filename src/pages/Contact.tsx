@@ -96,12 +96,14 @@ const Contact = () => {
         >
           <form onSubmit={handleSubmit} className="space-y-4">
             <Input
+              required
               placeholder="Name"
               className="bg-[#3a3a4e] border-0  text-white placeholder:text-gray-400 md:h-12"
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             />
             <Input
+            required
               type="email"
               placeholder="Email"
               className="bg-[#3a3a4e] border-0 text-white placeholder:text-gray-400 md:h-12"
@@ -109,6 +111,7 @@ const Contact = () => {
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             />
             <Textarea
+            required
               placeholder="Message"
               className="bg-[#3a3a4e] border-0 text-white placeholder:text-gray-400 md:min-h-[160px] resize-none"
               value={formData.message}
