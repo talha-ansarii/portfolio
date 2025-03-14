@@ -26,7 +26,6 @@ const Skills = () => {
     "https://skillicons.dev/icons?i=prisma",
     "https://skillicons.dev/icons?i=aws",
     "https://skillicons.dev/icons?i=cloudflare",
-    "https://skillicons.dev/icons?i=firebase",
     "https://skillicons.dev/icons?i=gcp",
     "https://skillicons.dev/icons?i=netlify",
     "https://skillicons.dev/icons?i=vercel",
@@ -66,7 +65,6 @@ const Skills = () => {
     "Prisma",
     "AWS",
     "Cloudflare",
-    "Firebase",
   ];
 
   const names3 = [

@@ -8,6 +8,50 @@ import { StickyScrollMobile } from "./ui/sticky-scroll-reveal-mobile";
 
 const content = [
   {
+    title: "Repolens",
+    description:
+      "Repo Lens helps you quickly understand and navigate your codebase by allowing you to ask questions about your project. It leverages the power of AI to analyze your code and provide relevant answers, along with code references and summaries. This streamlines the development process, making it easier to find the information you need, especially in large or unfamiliar projects."
+,
+    content: (
+        <div className="h-[350px] w-full flex items-center justify-center ">
+        <PinContainer
+          title="/repolens"
+          href="https://repolens.vercel.app"
+        >
+          <div className="h-full w-full relative  flex items-center justify-center">
+        <DirectionAwareHover imageUrl={"/repolens.png"}>
+          <p className="font-bold text-xl">Repolens</p>
+          <p className="font-normal text-sm">  </p>
+        </DirectionAwareHover>
+      </div>
+
+        </PinContainer>
+      </div>
+    ),
+  },
+  {
+    title: "Tube Help",
+    description:
+      "Built with Next.js, using the Gemini API for AI-powered timestamps, smart summaries, quizzes, and an interactive chatbot."
+,
+    content: (
+        <div className="h-[350px] w-full flex items-center justify-center ">
+        <PinContainer
+          title="/tubeHelp"
+          href="https://tube-help.vercel.app"
+        >
+          <div className="h-full w-full relative  flex items-center justify-center">
+        <DirectionAwareHover imageUrl={"/tubehelp.png"}>
+          <p className="font-bold text-xl">Tube Help</p>
+          <p className="font-normal text-sm">  </p>
+        </DirectionAwareHover>
+      </div>
+
+        </PinContainer>
+      </div>
+    ),
+  },
+  {
     title: "MOVIX",
     description:
       "An application to find ratings and reviews for the latest movies and TV shows. Users can also watch trailers and get recommendations based on their preferences.",
@@ -94,6 +138,41 @@ const content = [
   },
 ];
 const contentMobile = [
+  {
+    title: "Repolens",
+    description:
+      "Repo Lens helps you quickly understand and navigate your codebase by allowing you to ask questions about your project. It leverages the power of AI to analyze your code and provide relevant answers, along with code references and summaries. This streamlines the development process, making it easier to find the information you need, especially in large or unfamiliar projects."
+,
+    content: (
+        <div className="h-[350px] w-full flex items-center justify-center ">
+     
+      </div>
+    ),
+    modal : <AnimatedModalDemo content={{text:"Repo Lens helps you quickly understand and navigate your codebase by allowing you to ask questions about your project. It leverages the power of AI to analyze your code and provide relevant answers, along with code references and summaries. This streamlines the development process, making it easier to find the information you need, especially in large or unfamiliar projects.",
+      link : "https://repolens.vercel.app/",
+      images : ["/repolens.png","/repolens2.png","/repolens3.png"],
+      title : "Repolens" ,
+      linkText : "/repolens"
+    }}/>
+  },
+  {
+    title: "Tube Help",
+    description:
+      "Built with Next.js, using the Gemini API for AI-powered timestamps, smart summaries, quizzes, and an interactive chatbot."
+,
+    content: (
+      <div className="h-[350px] w-full flex items-center justify-center ">
+        
+      </div>
+
+    ),
+    modal : <AnimatedModalDemo content={{text:"Built with Next.js, using the Gemini API for AI-powered timestamps, smart summaries, quizzes, and an interactive chatbot.",
+      link : "https://tube-help.vercel.app/",
+      images : ["/tubehelp.png"],
+      title : "Tube Help" ,
+      linkText : "/tubeHelp"
+    }}/>
+  },
   {
     title: "MOVIX",
     description:
