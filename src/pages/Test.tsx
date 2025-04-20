@@ -95,7 +95,7 @@ const PuzzleGame: React.FC = () => {
 
       <div className="flex flex-col items-center gap-2 mt-0 md:mt-0">
         <div className="reference-image mb-4">
-          <img src={imgUrl} alt="Reference" className="w-32 h-32 object-cover" />
+          <img src={imgUrl} alt="Reference" className="w-24 h-24 object-cover" />
         </div>
 
         <label className="custom-file-upload text-center cursor-pointer mt-[-10px] bg-[#EFF1C5] px-4 py-0 rounded transition">
