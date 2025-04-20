@@ -44,6 +44,7 @@ const Contact = () => {
       .finally(() => setIsSubmitting(false));
   };
 
+  const isMobile = window.innerWidth <= 768; // Check if the screen width is less than or equal to 768px
   return (
     <motion.div
       className="flex items-center justify-center p-4"
@@ -59,7 +60,7 @@ const Contact = () => {
       >
         <motion.div className="space-y-4">
           <motion.h1
-            className="text-2xl text-center md:text-left   md:text-6xl font-bold text-white"
+            className="text-xl mt-[-100px] md:mt-0 text-center md:text-left   md:text-6xl font-bold text-white"
             style={{ textTransform: 'uppercase', letterSpacing: '0.05em' }}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -67,8 +68,8 @@ const Contact = () => {
           >
             LET&apos;S MAKE
             <br />
-            SOMETHING
-            <br />
+            SOMETHING 
+            {isMobile ? ' ' : <br/>}
             AMAZING!
           </motion.h1>
 
@@ -89,7 +90,7 @@ const Contact = () => {
         </motion.div>
 
         <motion.div
-          className="bg-[#2a2a3e] = rounded-3xl p-6 space-y-4"
+          className="bg-[#2a2a3e] = rounded-3xl mt-[-50px] md:mt-0 p-6 space-y-4"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
