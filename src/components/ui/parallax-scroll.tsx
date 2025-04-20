@@ -39,7 +39,7 @@ export const ParallaxScrollSecond = ({
 
   return (
     <div
-      className={cn("h-[calc(100vh-100px)]  relative z-[20] no-scrollbar items-start overflow-y-auto w-[calc(100vw-100px)]", className)}
+      className={cn("h-[calc(100dvh-100px)]  relative z-[20] no-scrollbar items-start overflow-y-auto w-[calc(100vw-100px)]", className)}
       ref={gridRef}
     >
     

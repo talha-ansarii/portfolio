@@ -43,11 +43,12 @@ const FloatingDockMobile = ({
   items: { title: string; icon: React.ReactNode; href: string }[];
   className?: string;
 }) => {
+  
   let mouseX = useMotionValue(Infinity);
   return (
     <motion.div
-      onMouseMove={(e) => mouseX.set(e.pageX)}
-      onMouseLeave={() => mouseX.set(Infinity)}
+      // onMouseMove={(e) => mouseX.set(e.pageX)}
+      // onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
         "mx-auto flex md:hidden h-16 gap-[6px] items-end  rounded-2xl  px-4 pb-3",
         className
@@ -70,10 +71,10 @@ const FloatingDockDesktop = ({
   let mouseX = useMotionValue(Infinity);
   return (
     <motion.div
-      onMouseMove={(e) => mouseX.set(e.pageX)}
-      onMouseLeave={() => mouseX.set(Infinity)}
+      // onMouseMove={(e) => mouseX.set(e.pageX)}
+      // onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto hidden md:flex h-16 gap-4 items-end  rounded-2xl  px-4 pb-3",
+        "mx-auto hidden hover:scale-110 md:flex h-16 gap-4 items-end  rounded-2xl  px-4 pb-3",
         className
       )}
     >
