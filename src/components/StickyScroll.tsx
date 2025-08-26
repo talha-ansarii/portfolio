@@ -7,6 +7,71 @@ import { StickyScrollMobile } from "./ui/sticky-scroll-reveal-mobile";
 
 
 const content = [
+    {
+    title: "Spider",
+    description:
+      "Spider is a tool I've been building to make idea-to-code transformation faster and more intuitive."
+,
+    content: (
+        <div className="h-[350px] w-full flex items-center justify-center ">
+        <PinContainer
+          title="/spider"
+          href="https://spider.talhaansari.in"
+        >
+          <div className="h-full w-full relative  flex items-center justify-center">
+        <DirectionAwareHover imageUrl={"/spider.png"}>
+          <p className="font-bold text-xl">Spider</p>
+          <p className="font-normal text-sm">  </p>
+        </DirectionAwareHover>
+      </div>
+
+        </PinContainer>
+      </div>
+    ),
+  },
+   {
+    title: "MOVIX",
+    description:
+      "An application to find ratings and reviews for the latest movies and TV shows. Users can also watch trailers and get recommendations based on their preferences.",
+    content: (
+        <div className="h-[350px] w-full flex items-center justify-center ">
+        <PinContainer
+          title="/movix"
+          href="https://movix-henna-five.vercel.app/"
+        >
+          <div className="h-full w-full relative  flex items-center justify-center">
+        <DirectionAwareHover imageUrl={"/movix1.png"}>
+          <p className="font-bold text-xl">Movix</p>
+          <p className="font-normal text-sm">  </p>
+        </DirectionAwareHover>
+      </div>
+
+        </PinContainer>
+      </div>
+    ),
+  },
+
+  {
+    title: "SEVEN BURGERS",
+    description:
+      "A serverless web application where users can read blogs and explore the restaurant’s infoformation.",
+    content: (  
+        <div className="h-[350px] w-full flex items-center justify-center ">
+        <PinContainer
+          title="/sevenburgerss"
+          href="https://sevenburgerss.netlify.app/"
+        >
+          <div className="h-full w-full relative  flex items-center justify-center">
+        <DirectionAwareHover imageUrl={"/seven1.png"}>
+          <p className="font-bold text-xl">Seven Burgers</p>
+          <p className="font-normal text-sm"></p>
+        </DirectionAwareHover>
+      </div>
+
+        </PinContainer>
+      </div>
+    ),
+  },
   {
     title: "Repolens",
     description:
@@ -51,49 +116,7 @@ const content = [
       </div>
     ),
   },
-  {
-    title: "MOVIX",
-    description:
-      "An application to find ratings and reviews for the latest movies and TV shows. Users can also watch trailers and get recommendations based on their preferences.",
-    content: (
-        <div className="h-[350px] w-full flex items-center justify-center ">
-        <PinContainer
-          title="/movix"
-          href="https://movix-henna-five.vercel.app/"
-        >
-          <div className="h-full w-full relative  flex items-center justify-center">
-        <DirectionAwareHover imageUrl={"/movix1.png"}>
-          <p className="font-bold text-xl">Movix</p>
-          <p className="font-normal text-sm">  </p>
-        </DirectionAwareHover>
-      </div>
-
-        </PinContainer>
-      </div>
-    ),
-  },
-
-  {
-    title: "SEVEN BURGERS",
-    description:
-      "A serverless web application where users can read blogs and explore the restaurant’s infoformation.",
-    content: (  
-        <div className="h-[350px] w-full flex items-center justify-center ">
-        <PinContainer
-          title="/sevenburgerss"
-          href="https://sevenburgerss.netlify.app/"
-        >
-          <div className="h-full w-full relative  flex items-center justify-center">
-        <DirectionAwareHover imageUrl={"/seven1.png"}>
-          <p className="font-bold text-xl">Seven Burgers</p>
-          <p className="font-normal text-sm"></p>
-        </DirectionAwareHover>
-      </div>
-
-        </PinContainer>
-      </div>
-    ),
-  },
+ 
   {
     title: "E-commerce API",
     description:
@@ -139,6 +162,36 @@ const content = [
 ];
 const contentMobile = [
   {
+    title: "Spider",
+    description:
+      "Spider is a tool I've been building to make idea-to-code transformation faster and more intuitive."
+,
+    content: (
+        <div className="h-[350px] w-full flex items-center justify-center ">
+     
+      </div>
+    ),
+    modal: (
+      <AnimatedModalDemo
+        content={{
+          text: `Super excited to introduce Spider!!
+
+Spider is a tool I've been building to make idea-to-code transformation faster and more intuitive.
+
+The vision is simple:
+- Generate production-ready code with AI
+- Edit and iterate in real time
+- Empower developers and creators to build without friction
+`,
+          link: "https://spider.talhaansari.in",
+          images: ["/spider.png", "/spider1.png", "/spider2.png"],
+          title: "Spider",
+          linkText: "/repolens"
+        }}
+      />
+    )
+  },
+  {
     title: "Repolens",
     description:
       "Repo Lens helps you quickly understand and navigate your codebase by allowing you to ask questions about your project. It leverages the power of AI to analyze your code and provide relevant answers, along with code references and summaries. This streamlines the development process, making it easier to find the information you need, especially in large or unfamiliar projects."
@@ -150,7 +203,7 @@ const contentMobile = [
     ),
     modal : <AnimatedModalDemo content={{text:"Repo Lens helps you quickly understand and navigate your codebase by allowing you to ask questions about your project. It leverages the power of AI to analyze your code and provide relevant answers, along with code references and summaries. This streamlines the development process, making it easier to find the information you need, especially in large or unfamiliar projects.",
       link : "https://repolens.vercel.app/",
-      images : ["/repolens.png","/repolens2.png","/repolens3.png"],
+      images : ["/repolens.png","/repolens2.png","/repolens2.png"],
       title : "Repolens" ,
       linkText : "/repolens"
     }}/>
@@ -201,7 +254,7 @@ const contentMobile = [
     ),
     modal : <AnimatedModalDemo content={{text:"A serverless web application where users can read blogs and explore the restaurant’s infoformation.",
       link : "https://sevenburgerss.netlify.app/",
-      images : ["seven1.png","seven2.png","seven3.png","seven4.png","seven5.png"],
+      images : ["/seven1.png","/seven2.png","/seven3.png","/seven4.png","/seven5.png"],
       title : "Seven Burgers" ,
       linkText : "/sb"
     }}/>
@@ -217,7 +270,7 @@ const contentMobile = [
     ),
     modal : <AnimatedModalDemo content={{text:"Developed a RESTful API for an E-commerce application allowing management of products, categories, and user authentication.",
       link : "https://web-production-3594.up.railway.app/api-docs/",
-      images : ["ecom.png","ecom2.png","ecom3.png","ecom4.png","ecom5.png"],
+      images : ["/ecom.png","/ecom2.png","/ecom3.png","/ecom4.png","/ecom5.png"],
       title : "E-commerce API" ,
       linkText : "/api"
     }}/>
@@ -233,7 +286,7 @@ const contentMobile = [
     ),
     modal : <AnimatedModalDemo content={{text:"Simplify your reading with Sumz, an open-source article summarizer that transforms lengthy articles into clear and consise summaries.",
       link : "https://talha-sumz.netlify.app",
-      images : ["sumz.png","sumz2.png","sumz3.png","sumz4.png","sumz5.png"],
+      images : ["/sumz.png","/sumz2.png","/sumz3.png","/sumz4.png","/sumz5.png"],
       title : "SUMZ" ,
       linkText : "/sumz"
     }} />

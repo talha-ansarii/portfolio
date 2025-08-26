@@ -76,7 +76,7 @@ export function ExpandableCardDemo() {
                   height={200}
                   src={active.src}
                   alt={active.title}
-                  className="w-full h-60 lg:h-60 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-center"
+                  className="w-full bg-white object-contain h-60 lg:h-60 sm:rounded-tr-lg sm:rounded-tl-lg  object-center"
                 />
               </motion.div>
 
@@ -132,7 +132,7 @@ export function ExpandableCardDemo() {
                   height={100}
                   src={card.src}
                   alt={card.title}
-                  className="h-24 w-40 md:w-10 md:h-10  rounded-lg object-cover object-center"
+                  className="h-24 w-40 md:w-10 md:h-10  rounded-lg object-contain object-center"
                 />
               </motion.div>
               <div className="">
@@ -195,66 +195,62 @@ const cards = [
   {
     description: "Oct 2024 - Present",
     title: "Distance Connect",
-    src: "/distance.png",
+    smallSrc: "https://distanceconnect.in/logo.svg",
+    src: "https://distanceconnect.in/logo.svg",
     ctaText: "Play",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "https://distanceconnect.in",
     content: () => {return (
        <div className="text-sm font-bold titillium-web">
-        Big things coming up!!
-</div>
+         <div className="w-full gap-x-2 flex justify-left items-center"><p>Tech Lead </p>
+         <p>|</p>
+          <a href="https://distanceconnect.in" className="hover:underline" target="_blank" rel="noopener noreferrer"> visit site </a></div>  
+         
+         <ul className="list-disc pl-5 mt-2 font-normal space-y-1">
+           <li>
+             Spearheaded development of an AI-powered ed-tech platform from the ground up using the T3 Stack (<b>Next.js</b>, <b>TypeScript</b>, <b>tRPC</b>, <b>Prisma</b>).
+           </li>
+           <li>
+             Scaled platform to support 500+ monthly active users, improving build speed by 30% and maintaining 99.9% uptime on <b>GCP</b>.
+           </li>
+           <li>
+             Integrated <b>Google Calendar API</b> for session scheduling and real-time <b>WebSocket</b>-based chat, improving session attendance by 40%.
+           </li>
+           <li>
+             Led a cross-functional team to implement <b>CI/CD pipelines</b>, automated deployments, and feature delivery.
+           </li>
+         </ul>
+       </div>
       );
     },
   },
   
   {
-    description: "Feb 2024 - Present",
-    title: "DTU Times",
-    src: "/dtu.png",
+    description: "May 2025 - August 2025",
+    title: "Neo CFO",
+    src: "https://neocfo.io/logo_color.webp",
     ctaText: "Play",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
       return (
         <div className="text-sm titillium-web">
-          <div>
-            A <b>Front-End Developer</b> who is responsible for:
+          <div className="w-full gap-x-2 flex justify-left items-center font-bold">
+            <span>AI Engineer Intern</span>
+            <span>|</span>
+            <a href="https://neocfo.io" className="hover:underline" target="_blank" rel="noopener noreferrer">visit site</a>
           </div>
-          <ul className="flex flex-col gap-2">
-            <div className="flex gap-2">
-              <div>
-          ●
-
-              </div>
-            <li>Crafting responsive and engaging user interfaces using <strong>HTML5</strong>, <strong>CSS3</strong>, and <strong>JavaScript</strong></li>
-            </div>
-            <div className="flex gap-2">
-              <div>
-          ●
-
-              </div>
-              <li>Utilizing CSS frameworks like <strong>Bootstrap</strong> and <strong>TailwindCSS</strong> for efficient, consistent styling</li>
-            </div>
-            <div className="flex gap-2">
-              <div>
-          ●
-
-              </div>
-              <li>Developing web pages with <strong>React</strong> and <strong>Next.js</strong> for optimal performance and functionality</li>
-            </div>
-            <div className="flex gap-2">
-              <div>
-          ●
-
-              </div>
-              <li>Ensuring designs are mobile-optimized to provide seamless user experiences across devices</li>
-
-            </div>
-
-
-
-          
-
-           
-
+          <ul className="list-disc pl-5 mt-2 space-y-1">
+            <li>
+              Built AI agents to automate bank and GST reconciliation, reducing manual effort by over 60%.
+            </li>
+            <li>
+              Engineered real-time dashboard with data visualizations from accounting platforms (<b>Zoho</b>, <b>Tally</b>), using <b>React</b> + <b>FastAPI</b>.
+            </li>
+            <li>
+              Developed an intelligent chatbot using <b>CrewAI</b>, <b>LangGraph</b>, and <b>Langchain</b> that queries financial books and generates graphs based on user prompts.
+            </li>
+            <li>
+              Integrated backend services using <b>NestJS</b>, enabling seamless data flow between AI engine and React frontend.
+            </li>
           </ul>
         </div>
       );
