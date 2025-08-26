@@ -37,7 +37,7 @@ const content = [
         <div className="h-[350px] w-full flex items-center justify-center ">
         <PinContainer
           title="/movix"
-          href="https://movix-henna-five.vercel.app/"
+          href="https://movix.talhaansari.in/"
         >
           <div className="h-full w-full relative  flex items-center justify-center">
         <DirectionAwareHover imageUrl={"/movix1.png"}>
@@ -58,8 +58,8 @@ const content = [
     content: (  
         <div className="h-[350px] w-full flex items-center justify-center ">
         <PinContainer
-          title="/sevenburgerss"
-          href="https://sevenburgerss.netlify.app/"
+          title="/sevenburgers"
+          href="https://sevenburgerss.talhaansari.in/"
         >
           <div className="h-full w-full relative  flex items-center justify-center">
         <DirectionAwareHover imageUrl={"/seven1.png"}>
@@ -81,7 +81,7 @@ const content = [
         <div className="h-[350px] w-full flex items-center justify-center ">
         <PinContainer
           title="/repolens"
-          href="https://repolens.vercel.app"
+          href="https://repolens.talhaansari.in"
         >
           <div className="h-full w-full relative  flex items-center justify-center">
         <DirectionAwareHover imageUrl={"/repolens.png"}>
@@ -202,7 +202,7 @@ The vision is simple:
       </div>
     ),
     modal : <AnimatedModalDemo content={{text:"Repo Lens helps you quickly understand and navigate your codebase by allowing you to ask questions about your project. It leverages the power of AI to analyze your code and provide relevant answers, along with code references and summaries. This streamlines the development process, making it easier to find the information you need, especially in large or unfamiliar projects.",
-      link : "https://repolens.vercel.app/",
+      link : "https://repolens.talhaansari.in",
       images : ["/repolens.png","/repolens2.png","/repolens2.png"],
       title : "Repolens" ,
       linkText : "/repolens"
@@ -236,7 +236,7 @@ The vision is simple:
       </div>
     ),
     modal : <AnimatedModalDemo content={{text:"An application to find ratings and reviews for the latest movies and TV shows. Users can also watch trailers and get recommendations based on their preferences.",
-      link : "https://movix-henna-five.vercel.app/",
+      link : "https://movix.talhaansari.in/",
       images : ["/movix1.png","/movix2.png","/movix3.png","/movix4.png","/movix5.png"],
       title : "Movix" ,
       linkText : "/movix"
