@@ -81,7 +81,7 @@ const content = [
         <div className="h-[350px] w-full flex items-center justify-center ">
         <PinContainer
           title="/repolens"
-          href="https://repolens.talhaansari.in"
+          href="https://repolenss.talhaansari.in"
         >
           <div className="h-full w-full relative  flex items-center justify-center">
         <DirectionAwareHover imageUrl={"/repolens.png"}>
@@ -203,7 +203,7 @@ The vision is simple:
     ),
     modal : <AnimatedModalDemo content={{text:"Repo Lens helps you quickly understand and navigate your codebase by allowing you to ask questions about your project. It leverages the power of AI to analyze your code and provide relevant answers, along with code references and summaries. This streamlines the development process, making it easier to find the information you need, especially in large or unfamiliar projects.",
       link : "https://repolens.talhaansari.in",
-      images : ["/repolens.png","/repolens2.png","/repolens2.png"],
+      images : ["/repolenss.png","/repolens2.png","/repolens2.png"],
       title : "Repolens" ,
       linkText : "/repolens"
     }}/>
